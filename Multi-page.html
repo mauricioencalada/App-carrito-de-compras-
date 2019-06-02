@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html class="ui-mobile"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>App Jmobile</title>
+	<link rel="stylesheet" href="./Multi-page_files/jquery.mobile-1.4.5.min.css">
+	<link rel="stylesheet" href="./Multi-page_files/jqm-demos.css">
+	<link rel="stylesheet" href="css/index.css">
+	<script src="./Multi-page_files/jquery.js"></script>
+	<script src="./Multi-page_files/index.js"></script>
+	<script src="./Multi-page_files/jquery.mobile-1.4.5.min.js"></script>
+</head>
+
+<body class="ui-mobile-viewport ui-overlay-a" style="">
+
+<!-- Start of first page: #one -->
+<div data-role="page" id="one" data-url="one" tabindex="0" class="ui-page ui-page-theme-a ui-page-active" style="min-height: 697px;">
+
+	<div data-role="header" role="banner" class="ui-header ui-bar-inherit">
+		<img src="images/logo.jpg" width="200px" height="50px">
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">	
+		<input type="text" id="inputFerreteria"> 
+		<input type="button" value="Buscar" id="buscarFerreteria">
+		<div id="irPageDos">
+		<p><a href="#two" class="ui-btn ui-shadow ui-corner-all" id="botonPageDos"></a></p>
+		</div>
+	</div><!-- /content -->
+</div><!-- /page one -->
+
+<!-- Start of second page: #two -->
+<div data-role="page" id="two" data-theme="a" data-url="two">
+
+	<div data-role="header">
+		<h1 id="nombreFerreteria"></h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		<input type="text" id="inputElementos">
+		<input type="button" id="buscarElementos" value="Buscar">
+		<p id="elementosBuscados"></p>
+		<div id="irPageTres"><p><a href="#three" data-direction="reverse" class="ui-btn ui-shadow ui-corner-all ui-btn-b">Factura</a></p></div>
+	</div><!-- /content -->
+</div><!-- /page two -->
+
+<!-- Start of third page: #three -->
+<div data-role="page" id="three" data-theme="a" data-url="three">
+
+		<div data-role="header">
+			<h1>Factura</h1>
+		</div><!-- /header -->
+	
+		<div role="main" class="ui-content">
+				<table data-role="table" id="movie-table" data-mode="reflow" class="ui-responsive">
+						  <thead>							
+						    <tr>
+						      <th data-priority="1">Id</th>
+						      <th data-priority="persist">Descripción</th>
+						      <th data-priority="2">Cantidad</th>
+						      <th data-priority="3">Total</th>
+						    </tr>
+						  </thead>	
+						  <tbody id="descripcion">
+							    
+						  </tbody>
+						</table>
+			<div id="irPageTres"><p><a href="#two" data-direction="reverse" class="ui-btn ui-shadow ui-corner-all ui-btn-b"></a></p></div>
+		</div><!-- /content -->
+	</div><!-- /page two -->
+<script src="js/index.js"></script>
+</html>
